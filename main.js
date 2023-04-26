@@ -6,7 +6,7 @@ let btn = document.querySelector(".btn")
 const fetchData = async () => {
 	
     //GET API from RAPID API //
-    let url = 'https://genius-song-lyrics1.p.rapidapi.com/artist/songs/?id=344497&per_page=20&page=1';
+    let url = 'https://genius-song-lyrics1.p.rapidapi.com/artist/songs/?id=344497&per_page=50&page=3';
   
     const options = {
 	method: 'GET',
@@ -20,7 +20,7 @@ const fetchData = async () => {
   try{
   	let resolve = await fetch(url,options)
     let data = await resolve.json()
-    console.log(data.songs[0])
+    console.log(data)
     return data
   }
   catch(error){
@@ -30,7 +30,7 @@ const fetchData = async () => {
 
 const renderData = async () => {
 	let data = await fetchData()
-  let songs = data.songs[2]
+  let songs = data.songs[8]
   let content = `<div class="Card">
                     <img src="${songs.header_image_url}"/>
                     <p>Title: ${songs.full_title}</p>
