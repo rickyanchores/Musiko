@@ -16,5 +16,6 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border: white 2px solid;
+  border: white 5px solid;
+  border-radius: 12px;
 }/*# sourceMappingURL=styles.css.map */

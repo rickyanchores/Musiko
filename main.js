@@ -30,7 +30,7 @@ const fetchData = async () => {
 
 const renderData = async () => {
 	let data = await fetchData()
-  let songs = data.songs[8]
+  let songs = data.songs[5]
   let content = `<div class="Card">
                     <img src="${songs.header_image_url}"/>
                     <p>Title: ${songs.full_title}</p>
